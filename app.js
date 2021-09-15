@@ -1,16 +1,14 @@
-document.getElementById('formTask').addEventListener('submit', saveTask);
+$(document).ready(function () {
+$('#formTask').on('submit', saveTask);
 
-function saveTask(e) {
-  let title = document.getElementById('title').value;
-  let description = document.getElementById('description').value;
-  console.log(description)
-
-  let task = {
-    title,
-    description
-  };
-
-  if(localStorage.getItem('tasks') === null) {
+function saveTask(event) {
+  let title = $('#title').val(); 
+  let description = $('#description').val();
+  const task = {
+    _title: title,
+    _description: description
+  }
+  if (localStorage.getItem('tasks') === null) {
     let tasks = [];
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -19,42 +17,41 @@ function saveTask(e) {
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
+  getTask();
+  $('#formTask').reset();
+  event.preventDefault();
+}
 
-  getTasks();
-  document.getElementById('formTask').reset();
-  e.preventDefault();
+function getTask(){
+  let tasks = JSON.parse(localStorage.getItem('tasks'));
+  $('#tasks').html('');
+
+  for (let i = 0; i < tasks.length; i++){
+    let title = tasks[i]._title;
+    let description = tasks[i]._description;
+    
+    $('#tasks').html(`<div class="card mb-3">
+    <div class="card-body">
+    <p>${title} - ${description}</p>
+    <a class="btn btn-danger" onclick="deleteTask('${title}')">
+    Listo el pollo
+    </a>
+    </div>
+    </div>`); 
+  }
 }
 
 function deleteTask(title) {
-  console.log(title)
   let tasks = JSON.parse(localStorage.getItem('tasks'));
-  for(let i = 0; i < tasks.length; i++) {
-    if(tasks[i].title == title) {
-      tasks.splice(i, 1);
+  for (let i = 0; i < tasks.length; i++) {
+    if (tasks[i].title == title) {
+      tasks.splice(i, 1)
     }
   }
-  
   localStorage.setItem('tasks', JSON.stringify(tasks));
-  getTasks();
+  getTask();
 }
 
-function getTasks() {
-  let tasks = JSON.parse(localStorage.getItem('tasks'));
-  let tasksView = document.getElementById('tasks');
-  tasksView.innerHTML = '';
-  for(let i = 0; i < tasks.length; i++) {
-    let title = tasks[i].title;
-    let description = tasks[i].description;
+getTask();
 
-    tasksView.innerHTML += `<div class="card mb-3">
-        <div class="card-body">
-          <p>${title} - ${description}</p>
-            <div align="right">
-                <a href="#" onclick="deleteTask('${title}')" class="btn btn-outline-success float-right">Listo el pollo</a>
-            </div>
-        </div>
-      </div>`;
-  }
-}
-
-getTasks();
+});
