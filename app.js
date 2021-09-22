@@ -1,14 +1,16 @@
-$(document).ready(function () {
-$('#formTask').on('submit', saveTask);
+$('#formTask').on('submit', saveTask); 
 
-function saveTask(event) {
+function saveTask(e) {
   let title = $('#title').val(); 
   let description = $('#description').val();
-  const task = {
-    _title: title,
-    _description: description
-  }
-  if (localStorage.getItem('tasks') === null) {
+  console.log(description)
+
+  let task = {
+    title,
+    description
+  };
+
+  if(localStorage.getItem('tasks') === null) {
     let tasks = [];
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -17,41 +19,43 @@ function saveTask(event) {
     tasks.push(task);
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
-  getTask();
+
+  getTasks();
   $('#formTask').reset();
-  event.preventDefault();
-}
-
-function getTask(){
-  let tasks = JSON.parse(localStorage.getItem('tasks'));
-  $('#tasks').html('');
-
-  for (let i = 0; i < tasks.length; i++){
-    let title = tasks[i]._title;
-    let description = tasks[i]._description;
-    
-    $('#tasks').html(`<div class="card mb-3">
-    <div class="card-body">
-    <p>${title} - ${description}</p>
-    <a class="btn btn-danger" onclick="deleteTask('${title}')">
-    Listo el pollo
-    </a>
-    </div>
-    </div>`); 
-  }
+  e.preventDefault();
 }
 
 function deleteTask(title) {
+  console.log(title)
   let tasks = JSON.parse(localStorage.getItem('tasks'));
-  for (let i = 0; i < tasks.length; i++) {
-    if (tasks[i].title == title) {
-      tasks.splice(i, 1)
+  for(let i = 0; i < tasks.length; i++) {
+    if(tasks[i].title == title) {
+      tasks.splice(i, 1);
     }
   }
+  
   localStorage.setItem('tasks', JSON.stringify(tasks));
-  getTask();
+  getTasks();
 }
 
-getTask();
+function getTasks() {
+  let tasks = JSON.parse(localStorage.getItem('tasks'));
+  let tasksView = document.getElementById('tasks');
 
-});
+  $('#tasks').html('');
+
+  for(let i = 0; i < tasks.length; i++) {
+    let title = tasks[i].title;
+    let description = tasks[i].description;
+
+    tasksView.innerHTML += `<div class="card mb-3">
+        <div class="card-body">
+          <p>${title} - ${description}
+          <a href="#" onclick="deleteTask('${title}')" class="btn btn-danger ml-5">Delete</a>
+          </p>
+        </div>
+      </div>`;
+  }
+}
+
+getTasks();
