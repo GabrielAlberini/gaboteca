@@ -1,0 +1,38 @@
+[
+    {
+       "Nombre": "Conquistar el mundo",
+       "Costo": "Gratis",
+       "Necesidades": "Nada, soy dios",
+       "Fecha": "Hoy"
+    },
+    {
+        "Nombre": "Trabajar de desarrollador",
+        "Costo": "Tiempo de vida",
+        "Necesidades": "Aprender y experimentar",
+        "Fecha": "Desde hoy a un año"
+    },
+    {
+        "Nombre": "Escribir un libro",
+        "Costo": "Y... bastante",
+        "Necesidades": "Una editorial y un par de contactos",
+        "Fecha": 2022
+    },
+    {
+        "Nombre": "Hacer un e-commerce",
+        "Costo": "Tiempo y plata para los bizcochos",
+        "Necesidades": "Aprender React",
+        "Fecha": "Mes que viene"
+    },
+    {
+        "Nombre": "Ganar el Quini",
+        "Costo": "Un montón",
+        "Necesidades": "Intentantalo millones de veces (o hackearlo aunque esta dificil)",
+        "Fecha": "Mañana empiezo"
+    },
+    {
+        "Nombre": "Tener una Ferrari",
+        "Costo": "$247,280 dólares",
+        "Necesidades": "$247,280 dólares",
+        "Fecha": "Vamo' a ver"
+    }
+]

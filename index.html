@@ -10,6 +10,7 @@
 </head>
 <body class="bg-success">
     <!--Navigation-->
+        <img src="gaboteka.jpg" class="rounded mx-auto d-block mt-4" alt="gabotekaIMG">
         <div class="container bg-success">
             <h1 class="navbar-brand pt-5 text-white">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
         </div>
@@ -39,11 +40,34 @@
                 <div id="tasks"></div>
             </div>
         </div>
+        <div class="pt-5">
+            <div class="row mx-md-n5">
+                <div class="col px-md-0">
+                    <h2 class="navbar-brand pb-3 text-white">Proyectos <span class="text-dark bg-warning">importantes<span></h2>
+                </div>
+                <div class="col px-md-5">
+                    <button id="boton" type="button" class="btn btn-light mb-4 ">Ver proyectos</button>
+                </div>
+            </div>        
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Costo ($)</th>
+                    <th scope="col">¿Qué necesito?</th>
+                    <th scope="col">Fecha a realizarse</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+        </div>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
     <script src="app.js"></script>
+    <script src="annualProjects.js"></script>
 </body>
 </html>
