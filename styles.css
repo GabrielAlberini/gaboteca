@@ -3,8 +3,8 @@
 svg {
     display: block;
     font: 10.5em 'Montserrat';
-    width: 960px;
-    height: 300px;
+    width: 460px;
+    height: 150px;
     margin: 0 auto;
 }
 
@@ -44,4 +44,15 @@ svg {
 
 @keyframes stroke-offset{
 	100% {stroke-dashoffset: -35%;}
+}
+
+/*Estilos generales.*/
+
+.link-ga {
+    text-decoration: none;
+    color: orange;
+    cursor: pointer;
+}
+.link-ga:hover {
+    transition: all .3s ease;
 }
