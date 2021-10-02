@@ -1,4 +1,4 @@
-$( "#boton" ).click(traerDatos);
+$( "#botonProyectos" ).click(traerDatos);
 
 let mostrarContenido = false;
 

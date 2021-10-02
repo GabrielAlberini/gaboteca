@@ -48,10 +48,9 @@ function getTasks() {
     let description = tasks[i].description;
 
     tasksView.innerHTML += `<div class="card mb-3">
-        <div class="card-body">
-          <p>${title} - ${description}
-          <a href="#" onclick="deleteTask('${title}')" class="btn btn-danger ml-5">Delete</a>
-          </p>
+        <div class="card-body d-flex justify-content-between">
+          <p>${title} - ${description}</p>
+          <a href="#" onclick="deleteTask('${title}')" class="btn btn-outline-danger">Listo el pollo</a>
         </div>
       </div>`;
   }

@@ -7,15 +7,36 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Gaboteca</title>
     <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15/svgs/solid/rocket.svg>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-success">
-    <!--Navigation-->
-        <img src="gaboteka.jpg" class="rounded mx-auto d-block mt-4" alt="gabotekaIMG">
-        <div class="container bg-success">
-            <h1 class="navbar-brand pt-5 text-white">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
-        </div>
+<body class="bg-light">
+    <!-- LOGO -->
+    <svg viewBox="0 0 960 300">
+        <symbol id="s-text">
+            <text text-anchor="middle" x="50%" y="80%">Gaboteka</text>
+        </symbol>
+        <g class = "g-ants">
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+            <use xlink:href="#s-text" class="text-copy"></use>
+        </g>
+    </svg>        
     <!--MainContent-->
-    <div class="container">
+    <div id="presentacion">
+    </div>
+    <div class="form-row text-center pt-3">
+        <div class="col-12">
+            <a id="botonHome" href="#/"><button type="button" class="btn btn-outline-primary">Home</button></a>
+            <a id="botonTasks" href="#/tasks"><button type="button" class="btn btn-outline-warning">Tareas</button></a>
+            <a id="botonProyectos" href="#/verproyectos"><button type="button" class="btn btn-outline-dark">Ver proyectos</button></a>
+        </div>
+    </div>
+    <div id="app" class="container">
+        <div class="container bg-light">
+            <h1 class="navbar-brand pt-5">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
+        </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
@@ -25,7 +46,7 @@
                                 <input type="text" id="title" placeholder="¿Qué tenés que hacer?" class="form-control ">
                             </div>
                             <div class="form-group pt-3">
-                                <textarea id="description" cols="80" rows="8" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
+                                <textarea id="description" cols="80" rows="8" style="resize: none;" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
                             </div>
                             <div class="pt-3 d-grid gap-2">
                                 <button id="saveTask" type="submit" class="btn btn-dark">
@@ -43,10 +64,10 @@
         <div class="pt-5">
             <div class="row mx-md-n5">
                 <div class="col px-md-0">
-                    <h2 class="navbar-brand pb-3 text-white">Proyectos <span class="text-dark bg-warning">importantes<span></h2>
+                    <h2 class="navbar-brand pb-3">Proyectos <span class="text-dark bg-warning">importantes<span></h2>
                 </div>
                 <div class="col px-md-5">
-                    <button id="boton" type="button" class="btn btn-light mb-4 ">Ver proyectos</button>
+                    
                 </div>
             </div>        
             <table class="table table-dark">
@@ -69,5 +90,6 @@
     crossorigin="anonymous"></script>
     <script src="app.js"></script>
     <script src="annualProjects.js"></script>
+    <script src="spa.js"></script>
 </body>
 </html>
