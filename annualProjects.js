@@ -59,6 +59,8 @@ function traerDatos() {
         $("#tbody").hide();
         mostrarContenido = false;
     }
+
+    console.log("¡Página PROJECTS cargada con exito!")
 }
 
 

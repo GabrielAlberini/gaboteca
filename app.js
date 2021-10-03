@@ -1,9 +1,21 @@
 $('#formTask').on('submit', saveTask); 
-$( "#botonTasks" ).click(mostrarContenido);
-
-console.log("#botonTasks")
+$( "#botonTasks" ).click(mostrarContenidoTasks);
+$('#botonHome').click(mostrarContenidoHome)
 
 let mostrarContenidoTask = false;
+
+function mostrarContenidoTasks() {
+
+  if (mostrarContenidoTask == false) {
+    $("#container-tasks").show();
+    mostrarContenidoTask = true;
+  } else {
+    $("#container-tasks").hide();
+    mostrarContenidoTask = false;
+  }
+
+  console.log("¡Página TASKS cargada con exito!")
+}
 
 function saveTask(e) {
   let title = $('#title').val(); 
@@ -61,51 +73,23 @@ function getTasks() {
   }
 }
 
-function mostrarContenido() {
+function mostrarContenidoHome() {
+
   let presentacion = document.querySelector('#presentacion');
-  let theadProjects = document.querySelector('#container-tasks');
 
   presentacion.innerHTML = `
-    <p class="text-center">¡Hola! terricola, en esta aplicación tu podrás aprender a organizarte. En la pestaña <strong>tareas</strong> podrás poner en orden tus obligaciones diarias o dejar también, algún recordatorio. Por otra parte, y como veras, en la pestaña <strong>ver proyectos</strong> tendrás una breve descripción de cuales son los proyectos mas importantes del desarrollador de esta app: <a class="link-ga" href="https://www.linkedin.com/in/gabriel-alberini/"><strong>Gabriel Alberini</strong></a>. Sin nada mas que decir, ¡que la disfrutes! 🚀</p>
-  `
-  theadProjects.innerHTML = `
-  <div class="container bg-light">
-                <h1 class="navbar-brand pt-5">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <form id="formTask">
-                                <div class="form-group">
-                                    <input type="text" id="title" placeholder="¿Qué tenés que hacer?" class="form-control ">
-                                </div>
-                                <div class="form-group pt-3">
-                                    <textarea id="description" cols="80" rows="8" style="resize: none;" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
-                                </div>
-                                <div class="pt-3 d-grid gap-2">
-                                    <button id="saveTask" type="submit" class="btn btn-dark">
-                                        Recordar
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div id="tasks"></div>
-                </div>
-            </div>
+    <p class="text-center pt-5">¡Hola! terricola, en esta aplicación tu podrás aprender a organizarte. En la pestaña <strong>tareas</strong> podrás poner en orden tus obligaciones diarias o dejar también, algún recordatorio. Por otra parte, y como veras, en la pestaña <strong>ver proyectos</strong> tendrás una breve descripción de cuales son los proyectos mas importantes del desarrollador de esta app: <a class="link-ga" href="https://www.linkedin.com/in/gabriel-alberini/"><strong>Gabriel Alberini</strong></a>. Sin nada mas que decir, ¡que la disfrutes! 🚀</p>
   `
 
-  if (mostrarContenidoTask == false) {
+  if (mostrarContenido == false) {
     $("#presentacion").show();
-    mostrarContenidoTask = true;
+    mostrarContenido = true;
   } else {
     $("#presentacion").hide();
-    mostrarContenidoTask = false;
+    mostrarContenido = false;
   }
 
+  console.log("¡Página HOME cargada con exito!")
 }
 
 
