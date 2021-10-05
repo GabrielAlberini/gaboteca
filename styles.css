@@ -3,7 +3,7 @@
 svg {
     display: block;
     font: 10.5em 'Montserrat';
-    width: 460px;
+    width: 80%;
     height: 150px;
     margin: 0 auto;
 }
@@ -55,4 +55,12 @@ svg {
 }
 .link-ga:hover {
     transition: all .3s ease;
+}
+
+main {
+    height: auto;
+}
+
+#agradecimientos {
+    margin-top: 10px;
 }
