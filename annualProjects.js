@@ -60,7 +60,6 @@ function traerDatos() {
         mostrarContenido = false;
     }
 
-    console.log("¡Página PROJECTS cargada con exito!")
 }
 
 

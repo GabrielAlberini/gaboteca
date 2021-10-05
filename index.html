@@ -29,63 +29,19 @@
             <p class="text-secondary">Proyecto realizado para el curso de JavaScript en CoderHouse. ¿Qué deseas hacer?</p>
             <a id="botonHome" href="#/"><button type="button" class="btn btn-outline-primary m-3">Home</button></a>
             <a id="botonTasks" href="#/tasks"><button type="button" class="btn btn-outline-warning m-3">Tareas</button></a>
-            <a id="botonProyectos" href="#/verproyectos"><button type="button" class="btn btn-outline-dark m-3">Ver proyectos</button></a>
+            <a id="botonProyectos" href="#/viewProjects"><button type="button" class="btn btn-outline-dark m-3">Ver proyectos</button></a>
         </div>
     </div>
     <div id="app" class="container">
-        <div id="presentacion">
-        </div>
-        <div id="container-tasks" style="display: none;">
-            <div class="container bg-light">
-                <h1 class="navbar-brand pt-5">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <form id="formTask">
-                                <div class="form-group">
-                                    <input type="text" id="title" placeholder="¿Qué tenés que hacer?" class="form-control ">
-                                </div>
-                                <div class="form-group pt-3">
-                                    <textarea id="description" cols="80" rows="8" style="resize: none;" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
-                                </div>
-                                <div class="pt-3 d-grid gap-2">
-                                    <button id="saveTask" type="submit" class="btn btn-dark">
-                                        Recordar
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div id="tasks"></div>
-                </div>
-            </div>
-        </div>
-        <div id="container-table">
-            <div class="pt-5">
-                <div class="row mx-md-n5">
-                    <div id="tableTitle" class="col px-md-0"></div>
-                    <div class="col px-md-5">  
-                    </div>
-                </div>        
-                <table class="table">
-                    <thead id="thead">
-                    </thead>
-                    <tbody id="tbody">
-                    </tbody>
-                </table>
-            </div>
-        </div>
     </div>
     <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    
     <script src="annualProjects.js"></script>
-    <script src="spa.js"></script>
+    <script src="views.js"></script>
+    <script src="spa.js"></script>    
+    <script src="app.js"></script>
 </body>
 </html>
