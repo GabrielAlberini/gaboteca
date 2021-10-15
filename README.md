@@ -1,2 +1,3 @@
-# gabotecaTask
-Aplicación basica de un administrador de tareas. Bootstrap y JS.
+Gaboteca
+
+Proyecto realizado para el curso de JavaScript de CoderHouse.
