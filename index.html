@@ -9,8 +9,8 @@
     <link rel=icon href=https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15/svgs/solid/rocket.svg>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-light">
-    <main>
+<body class="container bg-light">
+<main>
         <!-- LOGO -->
     <svg viewBox="0 0 960 300">
         <symbol id="s-text">
@@ -27,30 +27,64 @@
     <!--MainContent-->
     <div class="form-row text-center pt-3">
         <div class="col-12">
-            <p class="text-secondary">Proyecto realizado para el curso de JavaScript en CoderHouse. ¿Qué deseas hacer?</p>
-            <a id="botonHome" href="#/"><button type="button" class="btn btn-outline-primary m-3">Home</button></a>
-            <a id="botonTasks" href="#/tasks"><button type="button" class="btn btn-outline-warning m-3">Tareas</button></a>
+            <p class="text-secondary">Proyecto realizado para el curso de <br>JavaScript en CoderHouse. ¿Qué deseas hacer?</p>
+            <a id="botonHome" href="#/hello"><button type="button" class="btn btn-outline-primary m-3">Saludo 🖖</button></a>
             <a id="botonProyectos" href="#/viewProjects"><button type="button" class="btn btn-outline-dark m-3">Ver proyectos</button></a>
+            <a id="botonSkills" href="#/skills"><button type="button" class="btn btn-outline-success m-3">Skills</button></a>
+            <a id="botonTasks" href="#/contact"><button type="button" class="btn btn-outline-warning m-3">¡Conectarme contigo!</button></a>
         </div>
     </div>
-    <div id="app" class="container">
+    <div id="app"></div>
+    
+    <div class="container bg-light">
+        <h1 class="navbar-brand pt-5">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
     </div>
-    </main>
-    <footer>
-        <div id="agradecimientos" class="form-row text-center pt-3">
-            <div class="col-12">
-                <p class="text-secondary">Hecho con 🤍 y un poco de 🧠</p>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form id="formTask">
+                        <div class="form-group">
+                            <input type="text" id="title" placeholder="¿Qué tenés que hacer?" class="form-control ">
+                        </div>
+                        <div class="form-group pt-3">
+                            <textarea id="description" cols="80" rows="8" style="resize: none;" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
+                        </div>
+                        <div class="pt-3 d-grid gap-2">
+                            <button id="saveTask" type="submit" class="btn btn-dark">
+                                Recordar
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-    </footer>
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    
-    <script src="annualProjects.js"></script>
-    <script src="views.js"></script>
-    <script src="spa.js"></script>    
-    <script src="app.js"></script>
+        <div class="col-md-8">
+            <div id="tasks"></div>
+        </div>
+    </div>
+    </div>
+    </div>
+</main>
+<footer>
+    <div id="agradecimientos" class="form-row text-center pt-3">
+        <div class="col-12">
+            <p class="text-secondary">Hecho con 🤍 para <a href="https://www.coderhouse.com/" target="_blank">Coder House</a></p>
+        </div>
+    </div>
+</footer>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+crossorigin="anonymous"></script>
+
+<script src="./annualProjects.js"></script>
+<script src="./views.js"></script>
+<script src="./spa.js"></script>   
+<script src="./app.js"></script>
 </body>
 </html>
+
+
+
+  

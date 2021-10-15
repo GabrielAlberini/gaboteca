@@ -1,3 +1,4 @@
+
 window.addEventListener('hashchange', () => {
     router(window.location.hash);
 })
@@ -10,20 +11,24 @@ const router = (hash) => {
     content.innerHTML = "";
     
     switch (hash) {
-        case '#/': {
+        case '#/hello': {
             content.appendChild(viewHome());
-            return console.log("Estás en HOME.");
-        }
-        case '#/tasks': {
-            content.appendChild(viewTask());
-            return console.log("Estas en TASKS");
+            return console.log("Estás en HELLO");
         }
         case '#/viewProjects': {
             content.appendChild(viewProjects());
             return console.log("Estas en PROJECTS");
         }
+        case '#/contact': {
+            content.appendChild(viewContact());
+            return console.log("Estas en CONTACT");
+        }
+        case '#/skills': {
+            content.appendChild(viewSkills());
+            return console.log("Estas en SKILLS");
+        }
         default:
-            content.appendChild(error());
-            return console.log("Error 404.")
+            window.location.reload();
+            return console.log("La página no se encuentra, volviste al comienzo.");
     }
 }

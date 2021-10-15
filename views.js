@@ -1,7 +1,12 @@
 
 ///////// VIEW HOME /////////////
 const viewHome = () => {
-    const views = `<p class="text-center pt-5">¡Hola! terricola, en esta aplicación tu podrás aprender a organizarte. En la pestaña <strong>tareas</strong> podrás poner en orden tus obligaciones diarias o dejar también, algún recordatorio. Por otra parte, y como veras, en la pestaña <strong>ver proyectos</strong> tendrás una breve descripción de cuales son los proyectos mas importantes del desarrollador de esta app: <a class="link-ga" href="https://www.linkedin.com/in/gabriel-alberini/"><strong>Gabriel Alberini</strong></a>. Sin nada mas que decir, ¡que la disfrutes! 🚀</p>`
+    const views = `<p class="text-center pt-5">¡Hola! ¿Cómo estás? Espero que muy bien 🥳. Bienvenida/o a la <strong>Gaboteca</strong>. Aquí encontraras una gran herramienta para que puedas organizarte mejor. Por un lado, esta la aplicación en sí, donde podrás agendarte recordatorios u obligaciones que tengas que cumplir.<br><br>
+    Luego en el botón titulado <strong>Ver proyectos</strong> descubrirás una lista de las próximas metas a largo plazo del desarrollador de esta app: Gabriel Alberini 😎<br><br>
+    Llegando al final, en el apartado de <strong>Skills</strong>, encontrarás un detallado de cuales fueron las herramientas utilizadas para la fabricación de todo lo que ves.<br><br>
+    Y, por último, si quieres dejarme un mensaje, lo puede hacer a través de la pestaña <strong>¡Contactarme contigo!</strong><br><br>
+    Nada más por decir. Que lo disfrutes. 
+    </p>`
     
     const divHome = document.createElement('div');
 
@@ -10,46 +15,6 @@ const viewHome = () => {
     divHome.innerHTML = views;
     
     return divHome; 
-}
-
-///////// VIEW TASKS ////////////
-const viewTask = () => {
-    const views = `<div class="container bg-light">
-    <h1 class="navbar-brand pt-5">A ver, <span class="text-dark bg-warning">Gabo</span>. ¿Pinta que te ordenes?</h1>
-    </div>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <div class="card-body">
-                    <form id="formTask">
-                        <div class="form-group">
-                            <input type="text" id="title" placeholder="¿Qué tenés que hacer?" class="form-control ">
-                        </div>
-                        <div class="form-group pt-3">
-                            <textarea id="description" cols="80" rows="8" style="resize: none;" class="form-control" placeholder="¿Cómo lo vas a hacer?"></textarea>
-                        </div>
-                        <div class="pt-3 d-grid gap-2">
-                            <button id="saveTask" type="submit" class="btn btn-dark">
-                                Recordar
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-8">
-            <div id="tasks"></div>
-        </div>
-    </div>`
-
-    const divTask = document.createElement('div');
-
-    divTask.id = 'container-tasks';
-    
-    divTask.innerHTML = views;
-
-    return divTask;
-
 }
 
 ///////// VIEW PROJECT //////////
@@ -61,7 +26,7 @@ const viewProjects = () => {
             <div class="col px-md-5">  
             </div>
         </div>        
-        <table class="table">
+        <table class="table table-responsive">
             <thead id="thead">
             </thead>
             <tbody id="tbody">
@@ -78,17 +43,89 @@ const viewProjects = () => {
     return divProjects; 
 }
 
-const error = () => {
-    const views = `<div class="form-row text-center pt-3">
-    <div class="col-12">
-        <p class="text-danger" style="font-size: 100px">Error 404</p>
-    </div>`
+///////// VIEW SKILLS //////////
 
-    const divError = document.createElement('div');
+const viewSkills = () => {
+    const views = `
+    <div class="jumbotron pt-5">
+        <h3 class="display-4">Bootstrap</h3>
+        <p class="lead">A la hora de decidir como se vería la interfaz de la aplicación no dude ni un segundo en que usaría Bootstrap. Es dinámico, facil de implemental y bonito a la vista. ¡Aguante Bootstrap!</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="https://getbootstrap.com/" role="button">Ir a Bootstrap</a>
+        </p>
+        <h3 class="display-4">JavaScript</h3>
+        <p class="lead">JavaScript fue implementado en el proyecto para realizar la funcionalidad del mismo y generar la lógica en el almacenamiento de los datos.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="https://www.javascript.com/" role="button">Ir a JavaScript</a>
+        </p>
+        <h3 class="display-4">JQuery</h3>
+        <p class="lead">Esta biblioteca me permitio comprender de manera rápida algunos conceptos de JS. Su abreviación en la escritura de código es sencilla e intuitiva a la hora de leer.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="https://jquery.com/" role="button">Ir a JQuery</a>
+        </p>
+        <h3 class="display-4">JSON</h3>
+        <p class="lead">JSON es una forma muy fácil de escribir, almacenar e intercambiar datos. A pasar que dentro del proyecto su utilización no es demaciado amplia y aprovechada, se que tiene un gran uso dentro del Desarrollo Web. En esta ocación implementé este formato en el apartado Proyectos realizando una lista de tareas por hacer.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="https://www.json.org/json-es.html" role="button">Ir a JSON</a>
+        </p>
+        <h3 class="display-4">SPA JS</h3>
+        <p class="lead">Me gusto mucho aprender a usar esta herramienta. Aunque mi camino recien comienza en el mundo del desarrollo, alcance a ver la potencialidad de ésta herramienta. En la <strong>Gaboteca</strong> fue utilizada para interactuar entre las distintas vistas que obrecen los botones en el encabezado. Cada botón genera un "hash" que orienta al usuario en la vista del contenido.</p>
+        <hr class="my-4">
+        <p class="lead">
+            <a class="btn btn-primary btn-sm" href="https://single-spa.js.org/" role="button">Ir a SPA JS</a>
+        </p>
+    </div>
+    `
     
-    divError.innerHTML = views;
+    const divSkills = document.createElement('div');
 
-    divError.id = 'error';
+    divSkills.id = 'presentacion';
     
-    return divError;
+    divSkills.innerHTML = views;
+    
+    return divSkills; 
+}
+
+///////// VIEW CONTACT //////////
+
+const viewContact = () => {
+    const contact = `
+    <div class="row mt-5">
+        <div class="container bg-ligth col-md-4">
+            <form id="contactForm">
+
+                <div class="mb-3">
+                    <label class="form-label" for="name">¿Cómo te llamas?</label>
+                    <input class="form-control" id="name" type="text" placeholder="Nombre." required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="emailAddress">¡Cuál es tu correo electrónico?</label>
+                    <input class="form-control" id="emailAddress" type="email" placeholder="Email." required />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="message">¿Tienes un mensaje para mí?</label>
+                    <textarea class="form-control" id="message" type="text" placeholder="Mensaje." style="height: 10rem;" required></textarea>
+                </div>
+                <div class="d-grid">
+                <button class="btn btn-outline-primary btn-lg" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="cont-img-contact col-md-8 d-flex justify-content-end">
+            <img src="img/original-edicion.png" class="imagen-contact img-fluid" alt="imagen de onda">
+        <div class="popMsj">¡Gracias por contactarte conmigo!<br>Me comunicaré a la brevedad.</div>
+        </div>
+    </div>
+    `
+    const contContact = document.createElement('div');
+    
+    contContact.innerHTML = contact;
+
+    contContact.id = 'container-contact';
+    
+    return contContact;
 }
