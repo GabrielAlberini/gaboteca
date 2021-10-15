@@ -5,7 +5,7 @@ const viewHome = () => {
     Luego en el botón titulado <strong>Ver proyectos</strong> descubrirás una lista de las próximas metas a largo plazo del desarrollador de esta app: Gabriel Alberini 😎<br><br>
     Llegando al final, en el apartado de <strong>Skills</strong>, encontrarás un detallado de cuales fueron las herramientas utilizadas para la fabricación de todo lo que ves.<br><br>
     Y, por último, si quieres dejarme un mensaje, lo puede hacer a través de la pestaña <strong>¡Contactarme contigo!</strong><br><br>
-    Nada más por decir. Que lo disfrutes. 
+    Nada más por decir. <strong>¡Que lo disfrutes!</strong>. 🚀
     </p>`
     
     const divHome = document.createElement('div');
@@ -49,34 +49,34 @@ const viewSkills = () => {
     const views = `
     <div class="jumbotron pt-5">
         <h3 class="display-4">Bootstrap</h3>
-        <p class="lead">A la hora de decidir como se vería la interfaz de la aplicación no dude ni un segundo en que usaría Bootstrap. Es dinámico, facil de implemental y bonito a la vista. ¡Aguante Bootstrap!</p>
+        <p class="lead">A la hora de decidir cómo se vería la interfaz no dude ni un segundo en que usaría Bootstrap. Es dinámico, fácil de implementar y bonito a la vista. ¡Aguante Bootstrap!</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-sm" href="https://getbootstrap.com/" role="button">Ir a Bootstrap</a>
+            <a class="btn btn-outline-primary btn-sm" href="https://getbootstrap.com/" role="button">Ir a Bootstrap</a>
         </p>
         <h3 class="display-4">JavaScript</h3>
-        <p class="lead">JavaScript fue implementado en el proyecto para realizar la funcionalidad del mismo y generar la lógica en el almacenamiento de los datos.</p>
+        <p class="lead">JavaScript fue implementado en el proyecto para realizar la funcionalidad del mismo y generar la lógica en el almacenamiento y muestra de los datos.</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-sm" href="https://www.javascript.com/" role="button">Ir a JavaScript</a>
+            <a class="btn btn-outline-primary btn-sm" href="https://www.javascript.com/" role="button">Ir a JavaScript</a>
         </p>
         <h3 class="display-4">JQuery</h3>
-        <p class="lead">Esta biblioteca me permitio comprender de manera rápida algunos conceptos de JS. Su abreviación en la escritura de código es sencilla e intuitiva a la hora de leer.</p>
+        <p class="lead">Esta biblioteca me permitió comprender de manera rápida algunos conceptos de JS. Su abreviación en la escritura de código es sencilla e intuitiva a la hora de leer.</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-sm" href="https://jquery.com/" role="button">Ir a JQuery</a>
+            <a class="btn btn-outline-primary btn-sm" href="https://jquery.com/" role="button">Ir a JQuery</a>
         </p>
         <h3 class="display-4">JSON</h3>
-        <p class="lead">JSON es una forma muy fácil de escribir, almacenar e intercambiar datos. A pasar que dentro del proyecto su utilización no es demaciado amplia y aprovechada, se que tiene un gran uso dentro del Desarrollo Web. En esta ocación implementé este formato en el apartado Proyectos realizando una lista de tareas por hacer.</p>
+        <p class="lead">JSON es una forma muy fácil de escribir, almacenar e intercambiar datos. A pasar que dentro del proyecto su utilización no es demasiado amplia y aprovechada, sé que tiene un gran uso dentro del Desarrollo Web. En esta ocasión implementé este formato en el apartado <strong>Proyectos</strong> realizando una lista de tareas por hacer.</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-sm" href="https://www.json.org/json-es.html" role="button">Ir a JSON</a>
+            <a class="btn btn-outline-primary btn-sm" href="https://www.json.org/json-es.html" role="button">Ir a JSON</a>
         </p>
         <h3 class="display-4">SPA JS</h3>
-        <p class="lead">Me gusto mucho aprender a usar esta herramienta. Aunque mi camino recien comienza en el mundo del desarrollo, alcance a ver la potencialidad de ésta herramienta. En la <strong>Gaboteca</strong> fue utilizada para interactuar entre las distintas vistas que obrecen los botones en el encabezado. Cada botón genera un "hash" que orienta al usuario en la vista del contenido.</p>
+        <p class="lead">Me gustó mucho aprender a usar esta herramienta. Aunque mi camino recién comienza en el mundo del desarrollo, alcance a ver la potencialidad de esta herramienta. En la Gaboteca fue utilizada para interactuar entre las distintas vistas que ofrecen los botones ubicados en el encabezado. Cada botón genera un "hash" que orienta al usuario en la vista del contenido.</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-sm" href="https://single-spa.js.org/" role="button">Ir a SPA JS</a>
+            <a class="btn btn-outline-primary btn-sm" href="https://single-spa.js.org/" role="button">Ir a SPA JS</a>
         </p>
     </div>
     `

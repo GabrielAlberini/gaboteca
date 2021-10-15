@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 svg {
     display: block;
     font: 10.5em 'Montserrat';
@@ -133,4 +138,22 @@ main {
   .popMsj::after {
     display: none;
   }
+}
+
+footer {
+  background-color: rgb(247, 243, 236);
+  padding: 10px;
+}
+
+.ico-footer {
+  font-size: 25px;
+  padding:10px;
+}
+
+.linkedin {
+  color: #4D163D;
+}
+
+.github {
+  color: #840037;
 }

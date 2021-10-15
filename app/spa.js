@@ -15,7 +15,7 @@ const router = (hash) => {
             content.appendChild(viewHome());
             return console.log("Estás en HELLO");
         }
-        case '#/viewProjects': {
+        case '#/projects': {
             content.appendChild(viewProjects());
             return console.log("Estas en PROJECTS");
         }
